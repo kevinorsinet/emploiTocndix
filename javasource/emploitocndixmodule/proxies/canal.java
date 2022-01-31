@@ -20,7 +20,8 @@ public class canal
 	 */
 	public enum MemberNames
 	{
-		nom_canal("nom_canal");
+		nom_canal("nom_canal"),
+		tarif("tarif");
 
 		private java.lang.String metaName;
 
@@ -149,6 +150,42 @@ public class canal
 	public final void setnom_canal(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String nom_canal)
 	{
 		getMendixObject().setValue(context, MemberNames.nom_canal.toString(), nom_canal);
+	}
+
+	/**
+	 * @return value of tarif
+	 */
+	public final java.math.BigDecimal gettarif()
+	{
+		return gettarif(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of tarif
+	 */
+	public final java.math.BigDecimal gettarif(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.tarif.toString());
+	}
+
+	/**
+	 * Set value of tarif
+	 * @param tarif
+	 */
+	public final void settarif(java.math.BigDecimal tarif)
+	{
+		settarif(getContext(), tarif);
+	}
+
+	/**
+	 * Set value of tarif
+	 * @param context
+	 * @param tarif
+	 */
+	public final void settarif(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal tarif)
+	{
+		getMendixObject().setValue(context, MemberNames.tarif.toString(), tarif);
 	}
 
 	/**

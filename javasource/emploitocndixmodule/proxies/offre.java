@@ -22,14 +22,12 @@ public class offre
 	{
 		nom_poste("nom_poste"),
 		description_mission("description_mission"),
-		date_publication("date_publication"),
 		salaire_mini("salaire_mini"),
 		salaire_max("salaire_max"),
 		profil_recherche("profil_recherche"),
 		heures("heures"),
 		offre_contrat("emploiTocndixModule.offre_contrat"),
-		offre_site("emploiTocndixModule.offre_site"),
-		offre_canal("emploiTocndixModule.offre_canal");
+		offre_site("emploiTocndixModule.offre_site");
 
 		private java.lang.String metaName;
 
@@ -194,42 +192,6 @@ public class offre
 	public final void setdescription_mission(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String description_mission)
 	{
 		getMendixObject().setValue(context, MemberNames.description_mission.toString(), description_mission);
-	}
-
-	/**
-	 * @return value of date_publication
-	 */
-	public final java.util.Date getdate_publication()
-	{
-		return getdate_publication(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of date_publication
-	 */
-	public final java.util.Date getdate_publication(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.util.Date) getMendixObject().getValue(context, MemberNames.date_publication.toString());
-	}
-
-	/**
-	 * Set value of date_publication
-	 * @param date_publication
-	 */
-	public final void setdate_publication(java.util.Date date_publication)
-	{
-		setdate_publication(getContext(), date_publication);
-	}
-
-	/**
-	 * Set value of date_publication
-	 * @param context
-	 * @param date_publication
-	 */
-	public final void setdate_publication(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date date_publication)
-	{
-		getMendixObject().setValue(context, MemberNames.date_publication.toString(), date_publication);
 	}
 
 	/**
@@ -460,52 +422,6 @@ public class offre
 			getMendixObject().setValue(context, MemberNames.offre_site.toString(), null);
 		else
 			getMendixObject().setValue(context, MemberNames.offre_site.toString(), offre_site.getMendixObject().getId());
-	}
-
-	/**
-	 * @return value of offre_canal
-	 */
-	public final java.util.List<emploitocndixmodule.proxies.canal> getoffre_canal() throws com.mendix.core.CoreException
-	{
-		return getoffre_canal(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of offre_canal
-	 */
-	@SuppressWarnings("unchecked")
-	public final java.util.List<emploitocndixmodule.proxies.canal> getoffre_canal(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		java.util.List<emploitocndixmodule.proxies.canal> result = new java.util.ArrayList<emploitocndixmodule.proxies.canal>();
-		Object valueObject = getMendixObject().getValue(context, MemberNames.offre_canal.toString());
-		if (valueObject == null)
-			return result;
-		for (com.mendix.systemwideinterfaces.core.IMendixObject mendixObject : com.mendix.core.Core.retrieveIdList(context, (java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier>) valueObject))
-			result.add(emploitocndixmodule.proxies.canal.initialize(context, mendixObject));
-		return result;
-	}
-
-	/**
-	 * Set value of offre_canal
-	 * @param offre_canal
-	 */
-	public final void setoffre_canal(java.util.List<emploitocndixmodule.proxies.canal> offre_canal)
-	{
-		setoffre_canal(getContext(), offre_canal);
-	}
-
-	/**
-	 * Set value of offre_canal
-	 * @param context
-	 * @param offre_canal
-	 */
-	public final void setoffre_canal(com.mendix.systemwideinterfaces.core.IContext context, java.util.List<emploitocndixmodule.proxies.canal> offre_canal)
-	{
-		java.util.List<com.mendix.systemwideinterfaces.core.IMendixIdentifier> identifiers = new java.util.ArrayList<com.mendix.systemwideinterfaces.core.IMendixIdentifier>();
-		for (emploitocndixmodule.proxies.canal proxyObject : offre_canal)
-			identifiers.add(proxyObject.getMendixObject().getId());
-		getMendixObject().setValue(context, MemberNames.offre_canal.toString(), identifiers);
 	}
 
 	/**
