@@ -1,0 +1,10 @@
+Buildfile: A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment\build_core.xml
+
+deploy:
+     [copy] Copying 46 files to A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment
+     [copy] Copying 5 files to A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment\model\resources
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+

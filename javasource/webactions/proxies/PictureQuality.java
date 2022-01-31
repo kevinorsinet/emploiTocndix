@@ -6,11 +6,11 @@ package webactions.proxies;
 
 public enum PictureQuality
 {
-	original(new java.lang.String[][] { new java.lang.String[] { "en_US", "Original" } }),
-	low(new java.lang.String[][] { new java.lang.String[] { "en_US", "Low" } }),
-	medium(new java.lang.String[][] { new java.lang.String[] { "en_US", "Medium" } }),
-	high(new java.lang.String[][] { new java.lang.String[] { "en_US", "High" } }),
-	custom(new java.lang.String[][] { new java.lang.String[] { "en_US", "Custom" } });
+	original(new java.lang.String[][] { new java.lang.String[] { "en_US", "Original" }, new java.lang.String[] { "fr_FR", "Original" } }),
+	low(new java.lang.String[][] { new java.lang.String[] { "en_US", "Low" }, new java.lang.String[] { "fr_FR", "Low" } }),
+	medium(new java.lang.String[][] { new java.lang.String[] { "en_US", "Medium" }, new java.lang.String[] { "fr_FR", "Medium" } }),
+	high(new java.lang.String[][] { new java.lang.String[] { "en_US", "High" }, new java.lang.String[] { "fr_FR", "High" } }),
+	custom(new java.lang.String[][] { new java.lang.String[] { "en_US", "Custom" }, new java.lang.String[] { "fr_FR", "Custom" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 
@@ -25,11 +25,11 @@ public enum PictureQuality
 	{
 		if (captions.containsKey(languageCode))
 			return captions.get(languageCode);
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 
 	public java.lang.String getCaption()
 	{
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 }

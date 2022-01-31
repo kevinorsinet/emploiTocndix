@@ -6,10 +6,10 @@ package nanoflowcommons.proxies;
 
 public enum GeocodingProvider
 {
-	Google(new java.lang.String[][] { new java.lang.String[] { "en_US", "Google" } }),
-	Geocodio(new java.lang.String[][] { new java.lang.String[] { "en_US", "Geocodio" } }),
-	LocationIQ(new java.lang.String[][] { new java.lang.String[] { "en_US", "LocationIQ" } }),
-	MapQuest(new java.lang.String[][] { new java.lang.String[] { "en_US", "MapQuest" } });
+	Google(new java.lang.String[][] { new java.lang.String[] { "en_US", "Google" }, new java.lang.String[] { "fr_FR", "Google" } }),
+	Geocodio(new java.lang.String[][] { new java.lang.String[] { "en_US", "Geocodio" }, new java.lang.String[] { "fr_FR", "Geocodio" } }),
+	LocationIQ(new java.lang.String[][] { new java.lang.String[] { "en_US", "LocationIQ" }, new java.lang.String[] { "fr_FR", "LocationIQ" } }),
+	MapQuest(new java.lang.String[][] { new java.lang.String[] { "en_US", "MapQuest" }, new java.lang.String[] { "fr_FR", "MapQuest" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 
@@ -24,11 +24,11 @@ public enum GeocodingProvider
 	{
 		if (captions.containsKey(languageCode))
 			return captions.get(languageCode);
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 
 	public java.lang.String getCaption()
 	{
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 }

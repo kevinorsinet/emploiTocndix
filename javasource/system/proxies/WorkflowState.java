@@ -25,11 +25,11 @@ public enum WorkflowState
 	{
 		if (captions.containsKey(languageCode))
 			return captions.get(languageCode);
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 
 	public java.lang.String getCaption()
 	{
-		return captions.get("en_US");
+		return captions.get("fr_FR");
 	}
 }
