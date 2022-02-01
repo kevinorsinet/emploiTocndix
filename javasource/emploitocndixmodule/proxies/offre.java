@@ -24,8 +24,9 @@ public class offre
 		description_mission("description_mission"),
 		salaire_mini("salaire_mini"),
 		salaire_max("salaire_max"),
-		profil_recherche("profil_recherche"),
+		experience("experience"),
 		heures("heures"),
+		niveau_etude("niveau_etude"),
 		offre_contrat("emploiTocndixModule.offre_contrat"),
 		offre_site("emploiTocndixModule.offre_site");
 
@@ -267,39 +268,39 @@ public class offre
 	}
 
 	/**
-	 * @return value of profil_recherche
+	 * @return value of experience
 	 */
-	public final java.lang.String getprofil_recherche()
+	public final java.lang.String getexperience()
 	{
-		return getprofil_recherche(getContext());
+		return getexperience(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of profil_recherche
+	 * @return value of experience
 	 */
-	public final java.lang.String getprofil_recherche(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.String getexperience(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.profil_recherche.toString());
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.experience.toString());
 	}
 
 	/**
-	 * Set value of profil_recherche
-	 * @param profil_recherche
+	 * Set value of experience
+	 * @param experience
 	 */
-	public final void setprofil_recherche(java.lang.String profil_recherche)
+	public final void setexperience(java.lang.String experience)
 	{
-		setprofil_recherche(getContext(), profil_recherche);
+		setexperience(getContext(), experience);
 	}
 
 	/**
-	 * Set value of profil_recherche
+	 * Set value of experience
 	 * @param context
-	 * @param profil_recherche
+	 * @param experience
 	 */
-	public final void setprofil_recherche(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String profil_recherche)
+	public final void setexperience(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String experience)
 	{
-		getMendixObject().setValue(context, MemberNames.profil_recherche.toString(), profil_recherche);
+		getMendixObject().setValue(context, MemberNames.experience.toString(), experience);
 	}
 
 	/**
@@ -336,6 +337,42 @@ public class offre
 	public final void setheures(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal heures)
 	{
 		getMendixObject().setValue(context, MemberNames.heures.toString(), heures);
+	}
+
+	/**
+	 * @return value of niveau_etude
+	 */
+	public final java.lang.String getniveau_etude()
+	{
+		return getniveau_etude(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of niveau_etude
+	 */
+	public final java.lang.String getniveau_etude(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.niveau_etude.toString());
+	}
+
+	/**
+	 * Set value of niveau_etude
+	 * @param niveau_etude
+	 */
+	public final void setniveau_etude(java.lang.String niveau_etude)
+	{
+		setniveau_etude(getContext(), niveau_etude);
+	}
+
+	/**
+	 * Set value of niveau_etude
+	 * @param context
+	 * @param niveau_etude
+	 */
+	public final void setniveau_etude(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String niveau_etude)
+	{
+		getMendixObject().setValue(context, MemberNames.niveau_etude.toString(), niveau_etude);
 	}
 
 	/**

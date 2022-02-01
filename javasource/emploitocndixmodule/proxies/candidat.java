@@ -4,12 +4,8 @@
 
 package emploitocndixmodule.proxies;
 
-public class candidat
+public class candidat extends system.proxies.FileDocument
 {
-	private final com.mendix.systemwideinterfaces.core.IMendixObject candidatMendixObject;
-
-	private final com.mendix.systemwideinterfaces.core.IContext context;
-
 	/**
 	 * Internal name of this entity
 	 */
@@ -22,12 +18,19 @@ public class candidat
 	{
 		nom("nom"),
 		prenom("prenom"),
-		cv_lien("cv_lien"),
 		salaire_voulu("salaire_voulu"),
-		lettre_motivation("lettre_motivation"),
 		email("email"),
+		avis("avis"),
+		commentaire("commentaire"),
+		FileID("FileID"),
+		Name("Name"),
+		DeleteAfterDownload("DeleteAfterDownload"),
+		Contents("Contents"),
+		HasContents("HasContents"),
+		Size("Size"),
 		candidat_offre("emploiTocndixModule.candidat_offre"),
-		candidat_commentaire("emploiTocndixModule.candidat_commentaire");
+		candidat_cv("emploiTocndixModule.candidat_cv"),
+		candidat_motivation("emploiTocndixModule.candidat_motivation");
 
 		private java.lang.String metaName;
 
@@ -50,13 +53,9 @@ public class candidat
 
 	protected candidat(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject candidatMendixObject)
 	{
-		if (candidatMendixObject == null)
-			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
+		super(context, candidatMendixObject);
 		if (!com.mendix.core.Core.isSubClassOf("emploiTocndixModule.candidat", candidatMendixObject.getType()))
 			throw new java.lang.IllegalArgumentException("The given object is not a emploiTocndixModule.candidat");
-
-		this.candidatMendixObject = candidatMendixObject;
-		this.context = context;
 	}
 
 	/**
@@ -91,37 +90,6 @@ public class candidat
 		return result;
 	}
 
-	/**
-	 * Commit the changes made on this proxy object.
-	 */
-	public final void commit() throws com.mendix.core.CoreException
-	{
-		com.mendix.core.Core.commit(context, getMendixObject());
-	}
-
-	/**
-	 * Commit the changes made on this proxy object using the specified context.
-	 */
-	public final void commit(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		com.mendix.core.Core.commit(context, getMendixObject());
-	}
-
-	/**
-	 * Delete the object.
-	 */
-	public final void delete()
-	{
-		com.mendix.core.Core.delete(context, getMendixObject());
-	}
-
-	/**
-	 * Delete the object using the specified context.
-	 */
-	public final void delete(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		com.mendix.core.Core.delete(context, getMendixObject());
-	}
 	/**
 	 * @return value of nom
 	 */
@@ -195,42 +163,6 @@ public class candidat
 	}
 
 	/**
-	 * @return value of cv_lien
-	 */
-	public final java.lang.String getcv_lien()
-	{
-		return getcv_lien(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of cv_lien
-	 */
-	public final java.lang.String getcv_lien(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.cv_lien.toString());
-	}
-
-	/**
-	 * Set value of cv_lien
-	 * @param cv_lien
-	 */
-	public final void setcv_lien(java.lang.String cv_lien)
-	{
-		setcv_lien(getContext(), cv_lien);
-	}
-
-	/**
-	 * Set value of cv_lien
-	 * @param context
-	 * @param cv_lien
-	 */
-	public final void setcv_lien(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String cv_lien)
-	{
-		getMendixObject().setValue(context, MemberNames.cv_lien.toString(), cv_lien);
-	}
-
-	/**
 	 * @return value of salaire_voulu
 	 */
 	public final java.math.BigDecimal getsalaire_voulu()
@@ -267,42 +199,6 @@ public class candidat
 	}
 
 	/**
-	 * @return value of lettre_motivation
-	 */
-	public final java.lang.String getlettre_motivation()
-	{
-		return getlettre_motivation(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of lettre_motivation
-	 */
-	public final java.lang.String getlettre_motivation(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.lettre_motivation.toString());
-	}
-
-	/**
-	 * Set value of lettre_motivation
-	 * @param lettre_motivation
-	 */
-	public final void setlettre_motivation(java.lang.String lettre_motivation)
-	{
-		setlettre_motivation(getContext(), lettre_motivation);
-	}
-
-	/**
-	 * Set value of lettre_motivation
-	 * @param context
-	 * @param lettre_motivation
-	 */
-	public final void setlettre_motivation(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String lettre_motivation)
-	{
-		getMendixObject().setValue(context, MemberNames.lettre_motivation.toString(), lettre_motivation);
-	}
-
-	/**
 	 * @return value of email
 	 */
 	public final java.lang.String getemail()
@@ -336,6 +232,86 @@ public class candidat
 	public final void setemail(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String email)
 	{
 		getMendixObject().setValue(context, MemberNames.email.toString(), email);
+	}
+
+	/**
+	 * Set value of avis
+	 * @param avis
+	 */
+	public final emploitocndixmodule.proxies.EnumerationAvis getavis()
+	{
+		return getavis(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of avis
+	 */
+	public final emploitocndixmodule.proxies.EnumerationAvis getavis(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.avis.toString());
+		if (obj == null)
+			return null;
+
+		return emploitocndixmodule.proxies.EnumerationAvis.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of avis
+	 * @param avis
+	 */
+	public final void setavis(emploitocndixmodule.proxies.EnumerationAvis avis)
+	{
+		setavis(getContext(), avis);
+	}
+
+	/**
+	 * Set value of avis
+	 * @param context
+	 * @param avis
+	 */
+	public final void setavis(com.mendix.systemwideinterfaces.core.IContext context, emploitocndixmodule.proxies.EnumerationAvis avis)
+	{
+		if (avis != null)
+			getMendixObject().setValue(context, MemberNames.avis.toString(), avis.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.avis.toString(), null);
+	}
+
+	/**
+	 * @return value of commentaire
+	 */
+	public final java.lang.String getcommentaire()
+	{
+		return getcommentaire(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of commentaire
+	 */
+	public final java.lang.String getcommentaire(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.commentaire.toString());
+	}
+
+	/**
+	 * Set value of commentaire
+	 * @param commentaire
+	 */
+	public final void setcommentaire(java.lang.String commentaire)
+	{
+		setcommentaire(getContext(), commentaire);
+	}
+
+	/**
+	 * Set value of commentaire
+	 * @param context
+	 * @param commentaire
+	 */
+	public final void setcommentaire(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String commentaire)
+	{
+		getMendixObject().setValue(context, MemberNames.commentaire.toString(), commentaire);
 	}
 
 	/**
@@ -382,62 +358,89 @@ public class candidat
 	}
 
 	/**
-	 * @return value of candidat_commentaire
+	 * @return value of candidat_cv
 	 */
-	public final emploitocndixmodule.proxies.commentaire getcandidat_commentaire() throws com.mendix.core.CoreException
+	public final emploitocndixmodule.proxies.cv getcandidat_cv() throws com.mendix.core.CoreException
 	{
-		return getcandidat_commentaire(getContext());
+		return getcandidat_cv(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of candidat_commentaire
+	 * @return value of candidat_cv
 	 */
-	public final emploitocndixmodule.proxies.commentaire getcandidat_commentaire(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	public final emploitocndixmodule.proxies.cv getcandidat_cv(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		emploitocndixmodule.proxies.commentaire result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.candidat_commentaire.toString());
+		emploitocndixmodule.proxies.cv result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.candidat_cv.toString());
 		if (identifier != null)
-			result = emploitocndixmodule.proxies.commentaire.load(context, identifier);
+			result = emploitocndixmodule.proxies.cv.load(context, identifier);
 		return result;
 	}
 
 	/**
-	 * Set value of candidat_commentaire
-	 * @param candidat_commentaire
+	 * Set value of candidat_cv
+	 * @param candidat_cv
 	 */
-	public final void setcandidat_commentaire(emploitocndixmodule.proxies.commentaire candidat_commentaire)
+	public final void setcandidat_cv(emploitocndixmodule.proxies.cv candidat_cv)
 	{
-		setcandidat_commentaire(getContext(), candidat_commentaire);
+		setcandidat_cv(getContext(), candidat_cv);
 	}
 
 	/**
-	 * Set value of candidat_commentaire
+	 * Set value of candidat_cv
 	 * @param context
-	 * @param candidat_commentaire
+	 * @param candidat_cv
 	 */
-	public final void setcandidat_commentaire(com.mendix.systemwideinterfaces.core.IContext context, emploitocndixmodule.proxies.commentaire candidat_commentaire)
+	public final void setcandidat_cv(com.mendix.systemwideinterfaces.core.IContext context, emploitocndixmodule.proxies.cv candidat_cv)
 	{
-		if (candidat_commentaire == null)
-			getMendixObject().setValue(context, MemberNames.candidat_commentaire.toString(), null);
+		if (candidat_cv == null)
+			getMendixObject().setValue(context, MemberNames.candidat_cv.toString(), null);
 		else
-			getMendixObject().setValue(context, MemberNames.candidat_commentaire.toString(), candidat_commentaire.getMendixObject().getId());
+			getMendixObject().setValue(context, MemberNames.candidat_cv.toString(), candidat_cv.getMendixObject().getId());
 	}
 
 	/**
-	 * @return the IMendixObject instance of this proxy for use in the Core interface.
+	 * @return value of candidat_motivation
 	 */
-	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
+	public final emploitocndixmodule.proxies.motivation getcandidat_motivation() throws com.mendix.core.CoreException
 	{
-		return candidatMendixObject;
+		return getcandidat_motivation(getContext());
 	}
 
 	/**
-	 * @return the IContext instance of this proxy, or null if no IContext instance was specified at initialization.
+	 * @param context
+	 * @return value of candidat_motivation
 	 */
-	public final com.mendix.systemwideinterfaces.core.IContext getContext()
+	public final emploitocndixmodule.proxies.motivation getcandidat_motivation(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		return context;
+		emploitocndixmodule.proxies.motivation result = null;
+		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.candidat_motivation.toString());
+		if (identifier != null)
+			result = emploitocndixmodule.proxies.motivation.load(context, identifier);
+		return result;
+	}
+
+	/**
+	 * Set value of candidat_motivation
+	 * @param candidat_motivation
+	 */
+	public final void setcandidat_motivation(emploitocndixmodule.proxies.motivation candidat_motivation)
+	{
+		setcandidat_motivation(getContext(), candidat_motivation);
+	}
+
+	/**
+	 * Set value of candidat_motivation
+	 * @param context
+	 * @param candidat_motivation
+	 */
+	public final void setcandidat_motivation(com.mendix.systemwideinterfaces.core.IContext context, emploitocndixmodule.proxies.motivation candidat_motivation)
+	{
+		if (candidat_motivation == null)
+			getMendixObject().setValue(context, MemberNames.candidat_motivation.toString(), null);
+		else
+			getMendixObject().setValue(context, MemberNames.candidat_motivation.toString(), candidat_motivation.getMendixObject().getId());
 	}
 
 	@java.lang.Override
@@ -472,6 +475,7 @@ public class candidat
 	 * @return String GUID from this object, format: ID_0000000000
 	 * @deprecated Use getMendixObject().getId().toLong() to get a unique identifier for this object.
 	 */
+	@java.lang.Override
 	@java.lang.Deprecated
 	public java.lang.String getGUID()
 	{

@@ -88,6 +88,15 @@ public class FileDocument
 		if (com.mendix.core.Core.isSubClassOf("System.SynchronizationErrorFile", mendixObject.getType()))
 			return system.proxies.SynchronizationErrorFile.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("emploiTocndixModule.candidat", mendixObject.getType()))
+			return emploitocndixmodule.proxies.candidat.initialize(context, mendixObject);
+
+		if (com.mendix.core.Core.isSubClassOf("emploiTocndixModule.cv", mendixObject.getType()))
+			return emploitocndixmodule.proxies.cv.initialize(context, mendixObject);
+
+		if (com.mendix.core.Core.isSubClassOf("emploiTocndixModule.motivation", mendixObject.getType()))
+			return emploitocndixmodule.proxies.motivation.initialize(context, mendixObject);
+
 		return new system.proxies.FileDocument(context, mendixObject);
 	}
 
