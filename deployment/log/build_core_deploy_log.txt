@@ -2,8 +2,10 @@ Buildfile: A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment\build_c
 
 deploy:
      [copy] Copying 46 files to A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment
+     [copy] Copying 18 files to A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment\model\lib\userlib
      [copy] Copying 5 files to A:\Users\Blacklight\Documents\Mendix\emploiTocndix\deployment\model\resources
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
+
 

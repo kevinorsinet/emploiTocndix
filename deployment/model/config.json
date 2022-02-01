@@ -7,11 +7,21 @@
     "DatabaseUserName": "",
     "DatabaseUseIntegratedSecurity": "False",
     "ApplicationRootUrl": "http://localhost:8080/",
-    "ScheduledEventExecution": "None"
+    "ScheduledEventExecution": "Specified",
+    "MyScheduledEvents": "EmailTemplate.Cleanup"
   },
   "Constants": {
     "Atlas_Core.Atlas_Core_Version": "3.0.7",
     "Atlas_Web_Content.Atlas_Web_Content_Version": "3.0.6",
+    "EmailTemplate.LogNode": "Email",
+    "EmailTemplate.EmailAddressSeparator": ",",
+    "EmailTemplate.EmailRetention": "30",
+    "EmailTemplate.SendingEnabled": "True",
+    "EmailTemplate.EmailLogRetention": "30",
+    "Encryption.EncryptionPrefix": "{AES3}",
+    "Encryption.LogNode": "Encryption",
+    "Encryption.EncryptionKey": "fjetmn592azc25_kr58stmpt87_dsm26",
+    "Encryption.LegacyEncryptionKey": "ahtrplfthebflhtf",
     "NanoflowCommons.Nanoflow_Commons_Version": "2.1.0",
     "WebActions.WebActions_Version": "2.3.0"
   },

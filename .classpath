@@ -8,5 +8,14 @@
 	<classpathentry kind="lib" path="A:/Program Files/Mendix/9.8.1.32679/runtime/bundles/com.mendix.public-api.jar"/>
 	<classpathentry kind="lib" path="A:/Program Files/Mendix/9.8.1.32679/runtime/bundles/javax.servlet-api.servlet.jar"/>
 	<classpathentry kind="lib" path="A:/Program Files/Mendix/9.8.1.32679/runtime/bundles/javax.websocket-api.websocket.jar"/>
+	<classpathentry kind="lib" path="userlib/bcpg-jdk15on-1.69.jar"/>
+	<classpathentry kind="lib" path="userlib/bcpkix-jdk15on-1.69.jar"/>
+	<classpathentry kind="lib" path="userlib/bcprov-jdk15on-1.69.jar"/>
+	<classpathentry kind="lib" path="userlib/bcutil-jdk15on-1.69.jar"/>
+	<classpathentry kind="lib" path="userlib/com.springsource.javax.activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-codec-1.14.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-email-1.5.jar"/>
+	<classpathentry kind="lib" path="userlib/commons-io-2.7.jar"/>
+	<classpathentry kind="lib" path="userlib/javax.mail-1.6.0.jar"/>
 	<classpathentry kind="output" path="deployment/run/bin"/>
 </classpath>

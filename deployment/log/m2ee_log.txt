@@ -1,4 +1,2 @@
-[rtlauncher:container$] INFO Container start took 4195. Ready to accept admin requests.
+[rtlauncher:container$] INFO Container start took 4312. Ready to accept admin requests.
 ERROR StatusLogger Log4j2 could not find a logging implementation. Please add log4j-core to the classpath. Using SimpleLogger to log to the console...
-
-
